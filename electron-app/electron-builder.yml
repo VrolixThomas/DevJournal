@@ -1,0 +1,33 @@
+appId: com.devjournal.app
+productName: DevJournal
+copyright: Copyright © 2025
+
+protocols:
+  - name: DevJournal
+    schemes:
+      - devjournal
+
+directories:
+  output: release
+  buildResources: assets
+
+files:
+  - dist/**/*
+  - package.json
+  - .env
+
+mac:
+  category: public.app-category.developer-tools
+  target:
+    - dmg
+    - zip
+
+win:
+  target:
+    - nsis
+    - portable
+
+linux:
+  target:
+    - AppImage
+    - deb
